@@ -97,10 +97,7 @@ class GameEngine(
           if (first is Missile) this.field.generateExplosion(second.center, second.radius)
           else this.field.generateExplosion(first.center, first.radius)
         }
-        if (((first !is SpaceShip) and (second !is SpaceShip))
-        ) {
-          first.collideWith(second, GameEngineConfig.coefficientRestitution)
-        }
+        first.collideWith(second, GameEngineConfig.coefficientRestitution)
       }
     }
   }
